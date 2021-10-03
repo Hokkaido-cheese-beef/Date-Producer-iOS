@@ -1,6 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods,swiftpm,swiftpackagemanager
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,cocoapods,swiftpm,swiftpackagemanager
 
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
 
