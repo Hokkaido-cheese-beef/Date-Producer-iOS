@@ -19,6 +19,7 @@ class ResultViewController: UIViewController {
     }
     
     @IBAction func regenerateDatePlan(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     
