@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6JE-zm-RFl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Producer-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="result" id="Y6W-OH-hqX" customClass="ResultViewController" customModule="date_producer_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1i-Bw-e9O" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="832" width="414" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Es0-gW-zxk"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日のプラン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fe-cI-O8a">
+                                <rect key="frame" x="16" y="120" width="382" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.51874381300000005" green="0.37493714690000002" blue="0.41584056619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="DHF-mj-hO4">
+                                <rect key="frame" x="115" y="722" width="184" height="94"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gh-yz-9vu">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="デートプランを保存"/>
+                                        <connections>
+                                            <action selector="storeDatePlan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rEn-YX-Fhe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGL-3X-I5A">
+                                        <rect key="frame" x="0.0" y="63" width="184" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="もう一度生成する"/>
+                                        <connections>
+                                            <action selector="regenerateDatePlan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GJQ-4b-grw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="CT4-rl-TXV"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="10:00 〇〇くんと集合" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OWP-Hf-WZO">
+                                <rect key="frame" x="32" y="154.5" width="350" height="448"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.85490196080000003" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OWP-Hf-WZO" firstAttribute="top" secondItem="9Fe-cI-O8a" secondAttribute="bottom" constant="8" id="2uq-ct-8CQ"/>
+                            <constraint firstItem="9Fe-cI-O8a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="3ct-oA-hYf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OWP-Hf-WZO" secondAttribute="trailing" constant="32" id="7DL-EN-4JJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Fe-cI-O8a" secondAttribute="trailing" constant="16" id="C6s-HI-DkG"/>
+                            <constraint firstItem="i1i-Bw-e9O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FdN-D7-mu4"/>
+                            <constraint firstItem="9Fe-cI-O8a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="GR9-Sd-2gD"/>
+                            <constraint firstAttribute="bottom" secondItem="i1i-Bw-e9O" secondAttribute="bottom" id="KtR-NL-dSF"/>
+                            <constraint firstItem="DHF-mj-hO4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Sbl-Ej-hCX"/>
+                            <constraint firstItem="i1i-Bw-e9O" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="aVa-bk-Zls"/>
+                            <constraint firstItem="OWP-Hf-WZO" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="ucp-X7-PO9"/>
+                            <constraint firstItem="i1i-Bw-e9O" firstAttribute="top" secondItem="DHF-mj-hO4" secondAttribute="bottom" constant="16" id="vt1-Z9-zf2"/>
+                            <constraint firstItem="OWP-Hf-WZO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="wsk-DC-d0H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Date Producer" id="5MJ-pz-AVE"/>
+                    <connections>
+                        <outlet property="bannerView" destination="i1i-Bw-e9O" id="k6r-0q-kRU"/>
+                        <outlet property="datePlanTextView" destination="OWP-Hf-WZO" id="teZ-3Z-8H0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.95652173913049" y="78.348214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kw2-mp-eJ9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6JE-zm-RFl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ZK-PX-EVx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="18a-WR-N9f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVd-nx-Tp1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76.811594202898561" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
