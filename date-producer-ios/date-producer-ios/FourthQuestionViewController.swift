@@ -18,4 +18,12 @@ class FourthQuestionViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
+    
+    @IBAction func generateDatePlan(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Result", bundle: nil)
+        let resultViewController = storyboard.instantiateViewController(withIdentifier: "result") as! ResultViewController
+        navigationController?.pushViewController(resultViewController, animated: true)
+        
+    }
+    
 }
