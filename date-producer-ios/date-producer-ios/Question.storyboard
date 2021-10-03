@@ -162,6 +162,9 @@
                         <color key="backgroundColor" red="0.94117647059999998" green="0.85490196080000003" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Date Producer" id="A4i-lw-q4j"/>
+                    <connections>
+                        <outlet property="bannerView" destination="6ZH-fy-luV" id="yZu-yn-kFN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mod-jA-fHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,6 +252,9 @@
                         <color key="backgroundColor" red="0.94117647059999998" green="0.85490196080000003" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Date Producer" id="2xd-7m-djI"/>
+                    <connections>
+                        <outlet property="bannerView" destination="37j-Px-dJB" id="lTf-DO-GoX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEl-Os-N2D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,7 +263,7 @@
         <!--Date Producer-->
         <scene sceneID="ezU-Pm-ff0">
             <objects>
-                <viewController id="alm-vZ-F2g" customClass="FirstQuestionViewController" customModule="date_producer_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="alm-vZ-F2g" customClass="FourthQuestionViewController" customModule="date_producer_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SZM-1a-9Z2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,6 +330,9 @@
                         <color key="backgroundColor" red="0.94117647059999998" green="0.85490196080000003" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Date Producer" id="8zP-hA-Mvc"/>
+                    <connections>
+                        <outlet property="bannerView" destination="tAS-ck-dKg" id="oOT-DK-ow0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BmN-rz-Oxh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
