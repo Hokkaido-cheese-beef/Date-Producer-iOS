@@ -51,30 +51,27 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCZ-fk-p6y">
-                                <rect key="frame" x="16" y="347.5" width="382" height="31"/>
+                                <rect key="frame" x="16" y="347.5" width="382" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの年齢は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPG-qb-9Vv">
-                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.51874381300000005" green="0.37493714690000002" blue="0.41584056619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krW-Ko-vjy">
-                                        <rect key="frame" x="178.5" y="0.0" width="203.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="未選択"/>
-                                        <connections>
-                                            <action selector="selectMyAge:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v6A-Pq-H3h"/>
-                                        </connections>
-                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fP7-XB-cwi">
+                                        <rect key="frame" x="178.5" y="0.0" width="203.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="krW-Ko-vjy" firstAttribute="top" secondItem="tCZ-fk-p6y" secondAttribute="top" id="6De-ar-Ly2"/>
+                                    <constraint firstAttribute="trailing" secondItem="fP7-XB-cwi" secondAttribute="trailing" id="0u7-bV-eTj"/>
+                                    <constraint firstAttribute="bottom" secondItem="fP7-XB-cwi" secondAttribute="bottom" id="41i-tq-9FV"/>
                                     <constraint firstItem="ZPG-qb-9Vv" firstAttribute="top" secondItem="tCZ-fk-p6y" secondAttribute="top" id="EGc-00-0wX"/>
                                     <constraint firstAttribute="bottom" secondItem="ZPG-qb-9Vv" secondAttribute="bottom" id="S39-lw-Cs2"/>
-                                    <constraint firstAttribute="bottom" secondItem="krW-Ko-vjy" secondAttribute="bottom" id="bdd-ZB-10f"/>
-                                    <constraint firstAttribute="trailing" secondItem="krW-Ko-vjy" secondAttribute="trailing" id="qUl-1P-eGd"/>
                                     <constraint firstItem="ZPG-qb-9Vv" firstAttribute="leading" secondItem="tCZ-fk-p6y" secondAttribute="leading" id="tkM-8y-YtJ"/>
+                                    <constraint firstItem="fP7-XB-cwi" firstAttribute="top" secondItem="tCZ-fk-p6y" secondAttribute="top" id="ybL-u0-BzS"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7x4-Zl-EAy">
@@ -152,7 +149,7 @@
                     <navigationItem key="navigationItem" title="Date Producer" id="l31-Me-1wH"/>
                     <connections>
                         <outlet property="bannerView" destination="UOI-lY-60U" id="Eld-h9-2Bg"/>
-                        <outlet property="myAgeButton" destination="krW-Ko-vjy" id="wCQ-aX-pYE"/>
+                        <outlet property="myAgeTextField" destination="fP7-XB-cwi" id="TaH-fL-SiU"/>
                         <outlet property="myGenderButton" destination="tIM-UQ-6LN" id="YYe-PK-ad4"/>
                         <outlet property="myNameTextField" destination="SGX-Vp-z8i" id="p17-V6-Elp"/>
                         <outlet property="nextQuestionButton" destination="dds-9Y-rAV" id="Sef-Cl-q3f"/>
