@@ -16,51 +16,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i1i-Bw-e9O" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1i-Bw-e9O" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="832" width="414" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Es0-gW-zxk"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日のプラン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fe-cI-O8a">
-                                <rect key="frame" x="140" y="119" width="134" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日のプラン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fe-cI-O8a">
+                                <rect key="frame" x="16" y="120" width="382" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.51874381300000005" green="0.37493714690000002" blue="0.41584056619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gh-yz-9vu">
-                                <rect key="frame" x="127" y="691" width="160" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="デートプランを保存"/>
-                                <connections>
-                                    <action selector="storeDatePlan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rEn-YX-Fhe"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OWP-Hf-WZO">
-                                <rect key="frame" x="61" y="154" width="297" height="484"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="DHF-mj-hO4">
+                                <rect key="frame" x="115" y="722" width="184" height="94"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gh-yz-9vu">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="デートプランを保存"/>
+                                        <connections>
+                                            <action selector="storeDatePlan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rEn-YX-Fhe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGL-3X-I5A">
+                                        <rect key="frame" x="0.0" y="63" width="184" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="もう一度生成する"/>
+                                        <connections>
+                                            <action selector="regenerateDatePlan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GJQ-4b-grw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="CT4-rl-TXV"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="10:00 〇〇くんと集合" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OWP-Hf-WZO">
+                                <rect key="frame" x="32" y="154.5" width="350" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGL-3X-I5A">
-                                <rect key="frame" x="127" y="750" width="160" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="もう一度生成する"/>
-                                <connections>
-                                    <action selector="regenerateDatePlan:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GJQ-4b-grw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.85490196080000003" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OWP-Hf-WZO" firstAttribute="top" secondItem="9Fe-cI-O8a" secondAttribute="bottom" constant="8" id="2uq-ct-8CQ"/>
+                            <constraint firstItem="9Fe-cI-O8a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="3ct-oA-hYf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OWP-Hf-WZO" secondAttribute="trailing" constant="32" id="7DL-EN-4JJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Fe-cI-O8a" secondAttribute="trailing" constant="16" id="C6s-HI-DkG"/>
+                            <constraint firstItem="i1i-Bw-e9O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FdN-D7-mu4"/>
+                            <constraint firstItem="9Fe-cI-O8a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="GR9-Sd-2gD"/>
+                            <constraint firstAttribute="bottom" secondItem="i1i-Bw-e9O" secondAttribute="bottom" id="KtR-NL-dSF"/>
+                            <constraint firstItem="DHF-mj-hO4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Sbl-Ej-hCX"/>
+                            <constraint firstItem="i1i-Bw-e9O" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="aVa-bk-Zls"/>
+                            <constraint firstItem="OWP-Hf-WZO" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.5" id="ucp-X7-PO9"/>
+                            <constraint firstItem="i1i-Bw-e9O" firstAttribute="top" secondItem="DHF-mj-hO4" secondAttribute="bottom" constant="16" id="vt1-Z9-zf2"/>
+                            <constraint firstItem="OWP-Hf-WZO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="wsk-DC-d0H"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Date Producer" id="5MJ-pz-AVE"/>
                     <connections>
+                        <outlet property="bannerView" destination="i1i-Bw-e9O" id="k6r-0q-kRU"/>
                         <outlet property="datePlanTextView" destination="OWP-Hf-WZO" id="teZ-3Z-8H0"/>
                     </connections>
                 </viewController>
