@@ -5,6 +5,7 @@
 //  Created by KaitoKudo on 2021/10/03.
 //
 
+import GoogleMobileAds
 import UIKit
 
 @main
@@ -13,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         UINavigationBar.appearance().backgroundColor = UIColor(hex: "F7A3D5")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 25)]
         return true
