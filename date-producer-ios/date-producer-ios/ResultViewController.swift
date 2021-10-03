@@ -12,7 +12,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var datePlanTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.hidesBackButton = true
     }
     
     @IBAction func storeDatePlan(_ sender: Any) {
